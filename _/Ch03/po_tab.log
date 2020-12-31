@@ -1,0 +1,26 @@
+
+SQL*Loader: Release 10.1.0.5.0 - Production on Fri Aug 29 20:10:05 2008
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+Control File:   po_tab.ctl
+Data File:      po_tab.ctl
+  Bad File:     po_tab.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Continuation:    none specified
+Path used:      External Table
+
+Table PO_TAB, loaded from every logical record.
+Insert option in effect for this table: APPEND
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+XMLDATA                             FIRST  2000           CHARACTER            
+
+SQL*Loader-803: XML field type not supported by External Table

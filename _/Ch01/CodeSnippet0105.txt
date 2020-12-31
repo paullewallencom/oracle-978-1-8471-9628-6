@@ -1,0 +1,102 @@
+SQL> CREATE RESTORE POINT ORIGINAL_EMPLOYEES;
+
+Restore point created.
+
+SQL> R
+  1  SELECT SCN, NAME FROM V$RESTORE_POINT
+  2*
+
+       SCN NAME
+---------- --------------------------------
+    621254 ORIGINAL_EMPLOYEES
+
+SQL> SELECT SUM(SALARY) FROM EMPLOYEES;
+
+SUM(SALARY)
+-----------
+     691400
+
+SQL> UPDATE BAK_EMPLOYEES SET SALARY=SALARY*1.1;
+
+107 rows updated.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> SELECT SUM(SALARY) FROM EMPLOYEES;
+
+SUM(SALARY)
+-----------
+     691400
+
+SQL> C.EMPLOYEES.BAK_EMPLOYEES
+  1* SELECT SUM(SALARY) FROM BAK_EMPLOYEES
+SQL> /
+
+SUM(SALARY)
+-----------
+     760540
+
+SQL>
+
+
+[oracle@alpha DataPumpDemo]$ expdp parfile=hrExpAtRestorePoint.dpp
+
+Export: Release 10.2.0.1.0 - Production on Sunday, 20 July, 2008 15:42:16
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 -
+Production
+With the Partitioning, OLAP and Data Mining options
+Starting "HR"."HREXPATRESTOREPOINT":  parfile=hrExpAtRestorePoint.dpp
+Estimate in progress using BLOCKS method...
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+Total estimation using BLOCKS method: 64 KB
+Processing object type TABLE_EXPORT/TABLE/TABLE
+. . exported "HR"."BAK_EMPLOYEES"                        15.77 KB     107 rows
+Master table "HR"."HREXPATRESTOREPOINT" successfully loaded/unloaded
+******************************************************************************
+Dump file set for HR.HREXPATRESTOREPOINT is:
+  /home/oracle/default_dp_dest/hrExpAtRestorePoint.dmp
+Job "HR"."HREXPATRESTOREPOINT" successfully completed at 15:42:25
+
+
+[oracle@alpha DataPumpDemo]$ impdp hr/hr dumpfile=hrExpAtRestorePoint.dmp
+directory=default_dp_
+dest logfile=default_log_dest:imphrExpAtRestorePoint
+job_name=impAtRestorePoint
+
+Import: Release 10.2.0.1.0 - Production on Sunday, 20 July, 2008 15:45:27
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 -
+Production
+With the Partitioning, OLAP and Data Mining options
+Master table "HR"."IMPATRESTOREPOINT" successfully loaded/unloaded
+Starting "HR"."IMPATRESTOREPOINT":  hr/********
+dumpfile=hrExpAtRestorePoint.dmp directory=defau
+lt_dp_dest logfile=default_log_dest:imphrExpAtRestorePoint
+job_name=impAtRestorePoint
+Processing object type TABLE_EXPORT/TABLE/TABLE
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+. . imported "HR"."BAK_EMPLOYEES"                        15.77 KB     107 rows
+Job "HR"."IMPATRESTOREPOINT" successfully completed at 15:45:31
+
+[oracle@alpha DataPumpDemo]$
+
+
+
+SQL> select sum(salary) from bak_employees;
+
+SUM(SALARY)
+-----------
+     691400
+
+SQL>
+
+
+
+

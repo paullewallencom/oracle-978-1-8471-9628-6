@@ -1,0 +1,7 @@
+USERID=hr/hr
+DIRECTORY=default_dp_dest
+DUMPFILE=hrExpAtRestorePoint
+JOB_NAME=hrExpAtRestorePoint
+TABLES=BAK_EMPLOYEES
+LOGFILE=default_log_dest:hrExpAtRestorePoint
+FLASHBACK_SCN=621254

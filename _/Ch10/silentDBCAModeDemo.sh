@@ -1,0 +1,1 @@
+dbca -silent -responseFile ./dbca.rsp

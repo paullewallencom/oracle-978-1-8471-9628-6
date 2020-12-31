@@ -1,0 +1,1 @@
+emca -deconfig dbcontrol db -repos drop

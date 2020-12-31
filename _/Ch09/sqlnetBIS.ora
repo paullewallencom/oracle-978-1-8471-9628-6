@@ -1,0 +1,11 @@
+# Configure the wallet location at the sqlnet.ora file:
+NAMES.DIRECTORY_PATH= (TNSNAMES, EZCONNECT)
+WALLET_LOCATION = 
+(SOURCE = 
+	(METHOD = FILE) 
+	(METHOD_LOCATION = 
+		(DIRECTORY = /u01/oracle/product/11.2.0/dbhome_1/wallet) 
+	) 
+)
+
+SQLNET.WALLET_OVERRIDE = TRUE

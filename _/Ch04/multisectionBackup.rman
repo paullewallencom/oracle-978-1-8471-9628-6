@@ -1,0 +1,7 @@
+# One-off configuration of device type and parallelism.
+CONFIGURE DEVICE TYPE sbt PARALLELISM 4;
+CONFIGURE DEFAULT DEVICE TYPE TO sbt;
+# Divides the tablespace in 512M sections.
+RUN {
+BACKUP SECTION SIZE 512M TABLESPACE any_huge_TS;
+}

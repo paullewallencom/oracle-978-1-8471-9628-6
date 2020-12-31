@@ -1,0 +1,8 @@
+USERID=sh/sh
+DIRECTORY=default_dp_dest
+DUMPFILE=shSalesSampled25
+JOB_NAME=shSalesSampled25
+TABLES=SALES
+LOGFILE=default_log_dest:shSalesSampled25
+SAMPLE=25
+

@@ -1,0 +1,26 @@
+$ expdp hr/hr dumpfile=default_dp_dest:EmpDeptNoIndexes tables=EMPLOYEES,DEPARTMENTS exclude=INDEX:\"LIKE \'\%\'\" logfile=default_log_dest:EmpDeptNoIndexes
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+Starting "HR"."SYS_EXPORT_TABLE_01":  hr/******** dumpfile=default_dp_dest:EmpDeptNoIndexes tables=EMPLOYEES,DEPARTMENTS
+ exclude=INDEX:"LIKE '%'" logfile=default_log_dest:EmpDeptNoIndexes
+Estimate in progress using BLOCKS method...
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+Total estimation using BLOCKS method: 128 KB
+Processing object type TABLE_EXPORT/TABLE/TABLE
+Processing object type TABLE_EXPORT/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/COMMENT
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/TRIGGER
+Processing object type TABLE_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+. . exported "HR"."DEPARTMENTS"                          6.632 KB      27 rows
+. . exported "HR"."EMPLOYEES"                            15.76 KB     107 rows
+Master table "HR"."SYS_EXPORT_TABLE_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for HR.SYS_EXPORT_TABLE_01 is:
+  /home/oracle/default_dp_dest/EmpDeptNoIndexes.dmp
+Job "HR"."SYS_EXPORT_TABLE_01" successfully completed at 11:55:01
+

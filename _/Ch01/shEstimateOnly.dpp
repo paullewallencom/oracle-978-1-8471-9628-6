@@ -1,0 +1,5 @@
+USERID=sh/sh
+JOB_NAME=shEstimateOnly
+ESTIMATE_ONLY=y
+TABLES=SALES
+LOGFILE=default_log_dest:shSalesEstimateOnly

@@ -1,0 +1,3 @@
+SELECT VALUE 
+FROM V$PARAMETER 
+WHERE NAME = 'service_names';

@@ -1,0 +1,1 @@
+$ORACLE_HOME/opatch lsinventory -detail

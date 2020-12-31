@@ -1,0 +1,8 @@
+USERID=sh/sh
+DUMPFILE=shParallelExp01,shParallelExp02
+DIRECTORY=default_dp_dest
+JOB_NAME=shParallelExp
+TABLES=SALES
+LOGFILE=default_log_dest:shParallelExp
+ESTIMATE=statistics
+PARALLEL=2

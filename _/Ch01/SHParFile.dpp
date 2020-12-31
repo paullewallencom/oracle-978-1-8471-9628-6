@@ -1,0 +1,6 @@
+USERID=sh/sh
+DUMPFILE=shSales
+DIRECTORY=default_dp_dest
+JOB_NAME=shSalesCompleteDump
+TABLES=SALES
+LOGFILE=default_log_dest:shSales

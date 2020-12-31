@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<purchaseOrder xmlns="http://www.oracle.com/PO"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.oracle.com/PO http://www.oracle.com/scha0/po1.xsd"
+orderDate="1999-10-20">
+<shipTo country="US">
+</shipTo>
+<billTo country="US">
+</billTo>
+<items>
+<item partNum="872-AA">
+</item>
+<item partNum="926-AA">
+</item>
+</items>
+</purchaseOrder>

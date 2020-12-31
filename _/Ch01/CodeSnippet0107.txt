@@ -1,0 +1,43 @@
+[oracle@alpha DataPumpDemo]$ expdp parfile=shEstimateOnlyStats.dpp
+
+Export: Release 10.2.0.1.0 - Production on Tuesday, 29 July, 2008 20:29:51
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+Starting "SH"."SHESTIMATEONLYSTATS":  parfile=shEstimateOnlyStats.dpp
+Estimate in progress using STATISTICS method...
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+.  estimated "SH"."SALES":"SALES_Q4_2001"                1.936 MB
+.  estimated "SH"."SALES":"SALES_Q3_1999"                1.863 MB
+.  estimated "SH"."SALES":"SALES_Q3_2001"                1.826 MB
+.  estimated "SH"."SALES":"SALES_Q1_1999"                1.782 MB
+.  estimated "SH"."SALES":"SALES_Q2_2001"                1.757 MB
+.  estimated "SH"."SALES":"SALES_Q4_1999"                1.732 MB
+.  estimated "SH"."SALES":"SALES_Q1_2000"                1.727 MB
+.  estimated "SH"."SALES":"SALES_Q1_2001"                1.683 MB
+.  estimated "SH"."SALES":"SALES_Q3_2000"                1.637 MB
+.  estimated "SH"."SALES":"SALES_Q4_2000"                1.555 MB
+.  estimated "SH"."SALES":"SALES_Q2_2000"                1.542 MB
+.  estimated "SH"."SALES":"SALES_Q2_1999"                1.507 MB
+.  estimated "SH"."SALES":"SALES_Q3_1998"                1.404 MB
+.  estimated "SH"."SALES":"SALES_Q4_1998"                1.358 MB
+.  estimated "SH"."SALES":"SALES_Q1_1998"                1.215 MB
+.  estimated "SH"."SALES":"SALES_Q2_1998"                1019. KB
+.  estimated "SH"."SALES":"SALES_1995"                       0 KB
+.  estimated "SH"."SALES":"SALES_1996"                       0 KB
+.  estimated "SH"."SALES":"SALES_H1_1997"                    0 KB
+.  estimated "SH"."SALES":"SALES_H2_1997"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q1_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q1_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q2_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q2_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q3_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q3_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q4_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q4_2003"                    0 KB
+Total estimation using STATISTICS method: 25.52 MB
+Job "SH"."SHESTIMATEONLYSTATS" successfully completed at 20:29:57
+
+[oracle@alpha DataPumpDemo]$

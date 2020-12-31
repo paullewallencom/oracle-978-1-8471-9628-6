@@ -1,0 +1,8 @@
+
+SQL*Loader: Release 10.1.0.5.0 - Production on Tue Aug 5 05:59:22 2008
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL*Loader-128: unable to begin a session
+ORA-01045: user SQLLDRDEMO lacks CREATE SESSION privilege; logon denied
+

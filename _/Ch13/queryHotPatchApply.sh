@@ -1,0 +1,1 @@
+opatch query -is_online_patch <PatchLocation>

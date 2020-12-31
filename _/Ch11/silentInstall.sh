@@ -1,0 +1,1 @@
+runInstaller -silent -responseFile ./OUIResponseFileDemo.rsp -ignoreSysprereqs

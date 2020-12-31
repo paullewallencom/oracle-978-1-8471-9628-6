@@ -1,0 +1,1 @@
+emca -config dbcontrol db -repos create 

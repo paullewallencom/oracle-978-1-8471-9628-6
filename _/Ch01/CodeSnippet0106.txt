@@ -1,0 +1,33 @@
+Parallel
+
+Dump file set for SH.SHPARALLELEXP is:
+  /home/oracle/default_dp_dest/shParallelExp01.dmp
+  /home/oracle/default_dp_dest/shParallelExp02.dmp
+Job "SH"."SHPARALLELEXP" successfully completed at 16:14:27
+
+
+real    0m8.059s
+user    0m0.028s
+sys     0m0.018s
+[oracle@alpha DataPumpDemo]$ ll /home/oracle/default_dp_dest/shParallelEx*
+-rw-r-----  1 oracle dba 19243008 Jul 20 16:14 /home/oracle/default_dp_dest/shParallelExp01.dmp
+-rw-r-----  1 oracle dba 12193792 Jul 20 16:14 /home/oracle/default_dp_dest/shParallelExp02.dmp
+[oracle@alpha DataPumpDemo]$
+
+
+Serial
+Dump file set for SH.SHNOPARALLELEXP is:
+  /home/oracle/default_dp_dest/shNoParallelExp01.dmp
+Job "SH"."SHNOPARALLELEXP" successfully completed at 16:15:37
+
+
+real    0m7.817s
+user    0m0.033s
+sys     0m0.017s
+
+[oracle@alpha DataPumpDemo]$ ll /home/oracle/default_dp_dest/shNoParallelEx*
+-rw-r-----  1 oracle dba 31432704 Jul 20 16:15 /home/oracle/default_dp_dest/shNoParallelExp01.dm
+p
+-rw-r-----  1 oracle dba     4096 Jul 20 16:15 /home/oracle/default_dp_dest/shNoParallelExp02.dm
+p
+[oracle@alpha DataPumpDemo]$

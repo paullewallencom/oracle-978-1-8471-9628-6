@@ -1,0 +1,14 @@
+# The parameters correspond to a demo environment.  You must change the parameters to 
+# fit your particular test environment.
+
+SET DECRYPTION IDENTIFIED BY "oracle1";
+
+SQL 'ALTER DATABASE DATAFILE 8 OFFLINE';
+
+RESTORE TABLESPACE PWDONLY_TEST;
+
+RECOVER TABLESPACE PWDONLY_TEST;
+
+SQL 'ALTER DATABASE DATAFILE 8 ONLINE';
+
+

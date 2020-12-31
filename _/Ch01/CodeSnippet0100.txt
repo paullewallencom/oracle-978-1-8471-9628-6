@@ -1,0 +1,25 @@
+$ # Datapump scenario preparation
+
+$ # Connected as a privileged user there it will be creted two directories, one used for the datapump exports and the other for the logs.
+
+$ sqlplus / as sysdba
+
+SQL> create directory default_dp_dest 
+  2  as '/home/oracle/default_dp_dest';
+
+SQL> create directory default_log_dest
+  2  as '/home/oracle/default_log_dest';
+
+SQL> REM Grant the read and write privileges 
+SQL> REM on the working directories to the demo users
+
+SQL> grant read, write on directory default_dp_dest to scott;
+SQL> grant read, write on directory default_dp_dest to hr;
+SQL> grant read, write on directory default_dp_dest to sh;
+SQL> grant read, write on directory default_dp_dest to oe;
+
+SQL> grant read, write on directory default_log_dest to scott;
+SQL> grant read, write on directory default_log_dest to hr;
+SQL> grant read, write on directory default_log_dest to sh;
+SQL> grant read, write on directory default_log_dest to oe;
+

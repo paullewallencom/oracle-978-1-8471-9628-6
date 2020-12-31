@@ -1,0 +1,41 @@
+[oracle@alpha DataPumpDemo]$ expdp parfile=shEstimateOnly.dpp
+
+Export: Release 10.2.0.1.0 - Production on Tuesday, 29 July, 2008 20:31:28
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+Starting "SH"."SHESTIMATEONLY":  parfile=shEstimateOnly.dpp
+Estimate in progress using BLOCKS method...
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+.  estimated "SH"."SALES":"SALES_Q4_2001"                    2 MB
+.  estimated "SH"."SALES":"SALES_Q1_1999"                 1024 KB
+.  estimated "SH"."SALES":"SALES_Q3_2001"                 1024 KB
+.  estimated "SH"."SALES":"SALES_Q1_2000"                  960 KB
+.  estimated "SH"."SALES":"SALES_Q1_2001"                  960 KB
+.  estimated "SH"."SALES":"SALES_Q2_2001"                  960 KB
+.  estimated "SH"."SALES":"SALES_Q3_1999"                  960 KB
+.  estimated "SH"."SALES":"SALES_Q4_1999"                  960 KB
+.  estimated "SH"."SALES":"SALES_Q2_2000"                  896 KB
+.  estimated "SH"."SALES":"SALES_Q3_2000"                  896 KB
+.  estimated "SH"."SALES":"SALES_Q4_1998"                  896 KB
+.  estimated "SH"."SALES":"SALES_Q4_2000"                  896 KB
+.  estimated "SH"."SALES":"SALES_Q2_1999"                  832 KB
+.  estimated "SH"."SALES":"SALES_Q1_1998"                  768 KB
+.  estimated "SH"."SALES":"SALES_Q3_1998"                  768 KB
+.  estimated "SH"."SALES":"SALES_Q2_1998"                  640 KB
+.  estimated "SH"."SALES":"SALES_1995"                       0 KB
+.  estimated "SH"."SALES":"SALES_1996"                       0 KB
+.  estimated "SH"."SALES":"SALES_H1_1997"                    0 KB
+.  estimated "SH"."SALES":"SALES_H2_1997"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q1_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q1_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q2_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q2_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q3_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q3_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q4_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q4_2003"                    0 KB
+Total estimation using BLOCKS method: 15.12 MB
+Job "SH"."SHESTIMATEONLY" successfully completed at 20:31:33

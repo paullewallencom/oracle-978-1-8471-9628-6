@@ -1,0 +1,1 @@
+opatch lsinventory -all

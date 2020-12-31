@@ -1,0 +1,32 @@
+# Start nomount to perform controlfile level operations.
+STARTUP NOMOUNT;
+
+# The controlfile is copied from its current position
+# to the DiskGroup inside the +ASM instance
+RESTORE CONTROLFILE FROM '/u01/oracle/oradata/orcl/control01.ctl';
+
+# The database can be mounted now
+ALTER DATABASE MOUNT;
+
+# This operation will perform the database copy
+# to the +DiskGroup destination
+BACKUP AS COPY DATABASE FORMAT '+DiskGroup';
+
+# This command updates the controlfile and declares
+# that the official database files are those recently copied
+SWITCH DATABASE TO COPY;
+
+# Renames all redolog files to logfiles inside the ASM
+# this command must be issued for each existing redo log file
+SQL "ALTER DATABASE RENAME '/u01/oracle/oradata/rdo01.log' to '+DiskGroup';
+
+# This opens the database and creates a new redolog file set
+# inside the ASM
+ALTER DATABASE OPEN RESETLOGS;
+
+# Don't forget about the temporary datafiles, rman doesn't
+# manage the temporary datafiles, so the DBA must be aware
+# of this prior to releasing the database to production.
+# Finally get rid of the old temporary datafiles
+SQL "ALTER TABLESPACE TEMP ADD TEMPFILE";
+SQL "ALTER DATABASE TEMPFILE '/u01/oracle/oradata/temp01.dbf' DROP;

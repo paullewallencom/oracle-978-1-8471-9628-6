@@ -1,0 +1,32 @@
+
+
+$ expdp scott/tiger dumpfile=scott directory=default_dp_dest schemas=scott
+
+Export: Release 10.2.0.1.0 - Production on Saturday, 19 July, 2008 22:54:54
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Produc tion
+With the Partitioning, OLAP and Data Mining options
+Starting "SCOTT"."SYS_EXPORT_SCHEMA_01":  scott/******** dumpfile=scott director y=default_dp_dest schemas=scott
+Estimate in progress using BLOCKS method...
+Processing object type SCHEMA_EXPORT/TABLE/TABLE_DATA
+Total estimation using BLOCKS method: 192 KB
+Processing object type SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+Processing object type SCHEMA_EXPORT/TABLE/TABLE
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type SCHEMA_EXPORT/TABLE/COMMENT
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+. . exported "SCOTT"."DEPT"                              5.656 KB       4 rows
+. . exported "SCOTT"."EMP"                               7.820 KB      14 rows
+. . exported "SCOTT"."SALGRADE"                          5.585 KB       5 rows
+. . exported "SCOTT"."BONUS"                                 0 KB       0 rows
+Master table "SCOTT"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for SCOTT.SYS_EXPORT_SCHEMA_01 is:
+  /home/oracle/default_dp_dest/scott.dmp
+Job "SCOTT"."SYS_EXPORT_SCHEMA_01" successfully completed at 22:55:35
+
+$

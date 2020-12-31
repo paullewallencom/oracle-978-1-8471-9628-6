@@ -1,0 +1,84 @@
+[oracle@alpha DataPumpDemo]$ expdp parfile=shMultiplexedDumpFile.dpp
+
+Export: Release 10.2.0.1.0 - Production on Tuesday, 29 July, 2008 21:18:25
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+Starting "SH"."SHPARALLELEXP":  parfile=shMultiplexedDumpFile.dpp
+Estimate in progress using STATISTICS method...
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+.  estimated "SH"."SALES":"SALES_Q4_2001"                1.936 MB
+.  estimated "SH"."SALES":"SALES_Q3_1999"                1.863 MB
+.  estimated "SH"."SALES":"SALES_Q3_2001"                1.826 MB
+.  estimated "SH"."SALES":"SALES_Q1_1999"                1.782 MB
+.  estimated "SH"."SALES":"SALES_Q2_2001"                1.757 MB
+.  estimated "SH"."SALES":"SALES_Q4_1999"                1.732 MB
+.  estimated "SH"."SALES":"SALES_Q1_2000"                1.727 MB
+.  estimated "SH"."SALES":"SALES_Q1_2001"                1.683 MB
+.  estimated "SH"."SALES":"SALES_Q3_2000"                1.637 MB
+.  estimated "SH"."SALES":"SALES_Q4_2000"                1.555 MB
+.  estimated "SH"."SALES":"SALES_Q2_2000"                1.542 MB
+.  estimated "SH"."SALES":"SALES_Q2_1999"                1.507 MB
+.  estimated "SH"."SALES":"SALES_Q3_1998"                1.404 MB
+.  estimated "SH"."SALES":"SALES_Q4_1998"                1.358 MB
+.  estimated "SH"."SALES":"SALES_Q1_1998"                1.215 MB
+.  estimated "SH"."SALES":"SALES_Q2_1998"                1019. KB
+.  estimated "SH"."SALES":"SALES_1995"                       0 KB
+.  estimated "SH"."SALES":"SALES_1996"                       0 KB
+.  estimated "SH"."SALES":"SALES_H1_1997"                    0 KB
+.  estimated "SH"."SALES":"SALES_H2_1997"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q1_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q1_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q2_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q2_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q3_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q3_2003"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q4_2002"                    0 KB
+.  estimated "SH"."SALES":"SALES_Q4_2003"                    0 KB
+Total estimation using STATISTICS method: 25.52 MB
+. . exported "SH"."SALES":"SALES_Q4_2001"                2.257 MB   69749 rows
+. . exported "SH"."SALES":"SALES_Q4_1999"                2.014 MB   62388 rows
+. . exported "SH"."SALES":"SALES_Q3_1999"                2.166 MB   67138 rows
+. . exported "SH"."SALES":"SALES_Q2_1999"                1.753 MB   54233 rows
+. . exported "SH"."SALES":"SALES_Q3_2001"                2.129 MB   65769 rows
+. . exported "SH"."SALES":"SALES_Q3_1998"                1.633 MB   50515 rows
+. . exported "SH"."SALES":"SALES_Q1_2000"                2.011 MB   62197 rows
+. . exported "SH"."SALES":"SALES_Q1_1999"                2.070 MB   64186 rows
+. . exported "SH"."SALES":"SALES_Q1_2001"                1.964 MB   60608 rows
+. . exported "SH"."SALES":"SALES_Q4_1998"                1.581 MB   48874 rows
+. . exported "SH"."SALES":"SALES_Q2_2001"                2.050 MB   63292 rows
+. . exported "SH"."SALES":"SALES_Q1_1998"                1.412 MB   43687 rows
+. . exported "SH"."SALES":"SALES_Q3_2000"                1.909 MB   58950 rows
+. . exported "SH"."SALES":"SALES_Q2_1998"                1.159 MB   35758 rows
+. . exported "SH"."SALES":"SALES_1995"                       0 KB       0 rows
+. . exported "SH"."SALES":"SALES_1996"                       0 KB       0 rows
+. . exported "SH"."SALES":"SALES_H1_1997"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_H2_1997"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q1_2002"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q1_2003"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q2_2002"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q2_2003"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q3_2002"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q3_2003"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q4_2002"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q4_2003"                    0 KB       0 rows
+. . exported "SH"."SALES":"SALES_Q4_2000"                1.813 MB   55984 rows
+. . exported "SH"."SALES":"SALES_Q2_2000"                1.801 MB   55515 rows
+Processing object type TABLE_EXPORT/TABLE/TABLE
+Processing object type TABLE_EXPORT/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+Processing object type TABLE_EXPORT/TABLE/COMMENT
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/INDEX/FUNCTIONAL_AND_BITMAP/INDEX
+Processing object type TABLE_EXPORT/TABLE/INDEX/STATISTICS/FUNCTIONAL_AND_BITMAP/INDEX_STATISTIC
+S
+Processing object type TABLE_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Master table "SH"."SHPARALLELEXP" successfully loaded/unloaded
+******************************************************************************
+Dump file set for SH.SHPARALLELEXP is:
+  /home/oracle/default_dp_dest/shParallelExp0101.dmp
+  /home/oracle/default_dp_dest/shParallelExp0201.dmp
+  /home/oracle/default_dp_dest/shParallelExp0102.dmp
+  /home/oracle/default_dp_dest/shParallelExp0202.dmp
+Job "SH"."SHPARALLELEXP" successfully completed at 21:18:38

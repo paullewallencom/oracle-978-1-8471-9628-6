@@ -1,0 +1,3 @@
+select rpad(name,16)||' '||rpad(description,128)||':'
+from clobdemo
+/

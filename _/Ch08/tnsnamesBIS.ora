@@ -1,0 +1,8 @@
+SCOTT_SECURE = 
+	(DESCRIPTION = 
+		(ADDRESS = (PROTOCOL = TCP)(HOST = alpha)(PORT = 1521)) 
+		(CONNECT_DATA = 
+			(SERVER = DEDICATED) 
+			(SERVICE_NAME = beta) 
+		) 
+	)

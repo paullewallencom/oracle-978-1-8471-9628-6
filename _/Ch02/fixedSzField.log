@@ -1,0 +1,54 @@
+
+SQL*Loader: Release 10.1.0.5.0 - Production on Tue Aug 5 06:01:20 2008
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+Control File:   fixedSzField.ctl
+Data File:      fixedSzField.ctl
+  Bad File:     fixedSzField.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table EMP, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMPNO                                 1:4     4           CHARACTER            
+ENAME                                6:15    10           CHARACTER            
+JOB                                 17:25     9           CHARACTER            
+MGR                                 27:30     4           CHARACTER            
+SAL                                 32:39     8           CHARACTER            
+COMM                                41:48     8           CHARACTER            
+DEPTNO                              50:51     2           CHARACTER            
+
+Record 1: Discarded - all columns null.
+
+Table EMP:
+  7 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  1 Row not loaded because all fields were null.
+
+
+Space allocated for bind array:                   3840 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             8
+Total logical records rejected:         0
+Total logical records discarded:        1
+
+Run began on Tue Aug 05 06:01:20 2008
+Run ended on Tue Aug 05 06:01:20 2008
+
+Elapsed time was:     00:00:00.39
+CPU time was:         00:00:00.02

@@ -1,0 +1,1 @@
+runInstaller -silent -deinstall -responseFile ./silentDeinstallDemo.rsp

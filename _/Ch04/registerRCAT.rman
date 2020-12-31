@@ -1,0 +1,3 @@
+connect catalog rcat/oracle@orcl
+connect target /
+REGISTER DATABASE;

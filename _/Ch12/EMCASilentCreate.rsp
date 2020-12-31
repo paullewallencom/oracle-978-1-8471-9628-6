@@ -1,0 +1,10 @@
+#
+# EMCA parameters for silent mode setup
+#
+SID=sigma
+PORT=1521
+ORACLE_HOME=/u01/app/oracle/product/10.2.0/db_1
+DBSNMP_PWD=oracle
+SYSMAN_PWD=oracle
+SYS_PWD=oracle
+DBCONTROL? 8_HTTP_PORT=1158
